@@ -104,7 +104,7 @@ class OpenCCDataPlugin : Plugin<Project> {
                 ) {
                     project.exec {
                         workingDir = output
-                        commandLine = listOf("python3", merge) + sources + outputFilePath
+                        commandLine = listOf("python", merge) + sources + outputFilePath
                     }
                 }
 
@@ -114,7 +114,7 @@ class OpenCCDataPlugin : Plugin<Project> {
                 ) {
                     project.exec {
                         workingDir = output
-                        commandLine = listOf("python3", reverse, source, outputFilePath)
+                        commandLine = listOf("python", reverse, source, outputFilePath)
                     }
                 }
                 for (generated in DICTS_GENERATED) {
